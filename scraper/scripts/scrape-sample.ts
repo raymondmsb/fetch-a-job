@@ -25,8 +25,8 @@ const TENANT_DIR = process.env["TENANT_DIR"] ?? "data/tenants";
 const SCRAPE_DIR = process.env["SCRAPE_DIR"] ?? "data/scrape-outputs";
 const SAMPLE_SIZE = Number.parseInt(process.env["SAMPLE_SIZE"] ?? "5", 10);
 const SCRAPE_CONCURRENCY = Number.parseInt(process.env["SCRAPE_CONCURRENCY"] ?? "4", 10);
-const CONTACT_URL = process.env["CONTACT_URL"] ?? "https://github.com/datascry/openroles";
-const UA = process.env["UA"] ?? `openroles/${SCHEMA_VERSION} (+${CONTACT_URL})`;
+const CONTACT_URL = process.env["CONTACT_URL"] ?? "https://github.com/raymondmsb/fetch-a-job";
+const UA = process.env["UA"] ?? `fetch-a-job/${SCHEMA_VERSION} (+${CONTACT_URL})`;
 // Skip ATSes whose tenant list is not in a probe-confirmed-live state.
 const SKIP_ATSES = new Set<ATSId>(["workday", "ultipro"]);
 

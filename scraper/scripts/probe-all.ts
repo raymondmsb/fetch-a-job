@@ -20,7 +20,7 @@ import { RobotsTxtCache } from "../src/robots.ts";
 const DATA_DIR = process.env["TENANT_DIR"] ?? "data/tenants";
 const PER_ATS_CONCURRENCY = Number.parseInt(process.env["PROBE_CONCURRENCY"] ?? "4", 10);
 const UA =
-  process.env["UA"] ?? `openroles/${SCHEMA_VERSION} (+https://github.com/datascry/openroles)`;
+  process.env["UA"] ?? `fetch-a-job/${SCHEMA_VERSION} (+https://github.com/raymondmsb/fetch-a-job)`;
 // ATSes whose probe URL needs composite metadata we don't have on a
 // freshly-harvested slug list — leave their tenants untouched.
 const SKIP_ATSES = new Set<ATSId>(["workday", "ultipro"]);

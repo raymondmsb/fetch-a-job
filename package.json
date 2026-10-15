@@ -4,7 +4,7 @@
   "private": true,
   "description": "Static, queryable job board aggregator across major Applicant Tracking Systems",
   "license": "MIT",
-  "author": "datascry",
+  "author": "Raymond Bach",
   "type": "module",
   "engines": {
     "bun": ">=1.3.0"

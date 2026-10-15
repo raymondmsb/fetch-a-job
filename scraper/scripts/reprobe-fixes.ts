@@ -12,7 +12,7 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = resolve(HERE, "../../data/tenants");
 const robots = new RobotsTxtCache();
 const client = new HttpClient({
-  userAgent: "openroles/1.2.0 (+https://github.com/datascry/openroles)",
+  userAgent: "fetch-a-job/1.2.0 (+https://github.com/raymondmsb/fetch-a-job)",
   robots,
 });
 

@@ -6,9 +6,9 @@
 // Run: bun run scripts/qa-filters.ts [base-url]
 
 import { type Browser, chromium } from "@playwright/test";
-import { SITE_ORIGIN } from "../src/lib/site-config.ts";
+import { SITE_URL } from "../src/lib/site-config.ts";
 
-const BASE = process.argv[2] ?? `${SITE_ORIGIN}/`;
+const BASE = process.argv[2] ?? `${SITE_URL}/`;
 const PER_TEST_TIMEOUT_MS = 90_000;
 
 function emit(line: string): void {

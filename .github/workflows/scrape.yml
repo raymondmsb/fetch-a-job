@@ -25,8 +25,8 @@ permissions:
 
 env:
   BUN_VERSION: "1.3.13"
-  CONTACT_URL: "https://github.com/datascry/openroles"
-  USER_AGENT: "openroles/1.0.0 (+https://github.com/datascry/openroles)"
+  CONTACT_URL: "https://github.com/raymondmsb/fetch-a-job"
+  USER_AGENT: "fetch-a-job/1.0.0 (+https://github.com/raymondmsb/fetch-a-job)"
 
 jobs:
   scrape:

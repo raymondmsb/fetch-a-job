@@ -2,16 +2,16 @@
 
 **A daily-refreshed, privacy-respecting job board across 51 applicant tracking systems. No accounts. No ads. No tracking. Static HTML and gzipped JSON, served from GitHub Pages — filtered in your browser, cached for instant revisits.**
 
-[![Build + deploy](https://github.com/datascry/openroles/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/datascry/openroles/actions/workflows/build-deploy.yml)
-[![Nightly scrape](https://github.com/datascry/openroles/actions/workflows/scrape.yml/badge.svg)](https://github.com/datascry/openroles/actions/workflows/scrape.yml)
-[![PR checks](https://github.com/datascry/openroles/actions/workflows/pr.yml/badge.svg)](https://github.com/datascry/openroles/actions/workflows/pr.yml)
-[![Live roles](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fopenroles.today%2Fdata%2Fmanifest.json&query=%24.total_rows&label=live%20roles&color=brightgreen)](https://openroles.today/)
-[![Last refreshed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fopenroles.today%2Fdata%2Fmanifest.json&query=%24.built_at&label=last%20refreshed&color=blue)](https://openroles.today/)
+[![Build + deploy](https://github.com/raymondmsb/fetch-a-job/actions/workflows/build-deploy.yml/badge.svg)](https://github.com/raymondmsb/fetch-a-job/actions/workflows/build-deploy.yml)
+[![Nightly scrape](https://github.com/raymondmsb/fetch-a-job/actions/workflows/scrape.yml/badge.svg)](https://github.com/raymondmsb/fetch-a-job/actions/workflows/scrape.yml)
+[![PR checks](https://github.com/raymondmsb/fetch-a-job/actions/workflows/pr.yml/badge.svg)](https://github.com/raymondmsb/fetch-a-job/actions/workflows/pr.yml)
+[![Live roles](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraymondmsb.github.io%2Ffetch-a-job%2Fdata%2Fmanifest.json&query=%24.total_rows&label=live%20roles&color=brightgreen)](https://raymondmsb.github.io/fetch-a-job/)
+[![Last refreshed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraymondmsb.github.io%2Ffetch-a-job%2Fdata%2Fmanifest.json&query=%24.built_at&label=last%20refreshed&color=blue)](https://raymondmsb.github.io/fetch-a-job/)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY-SA 4.0](https://img.shields.io/badge/data-CC%20BY--SA%204.0-blue.svg)](LICENSE-DATA)
-[![GitHub Repo stars](https://img.shields.io/github/stars/datascry/openroles?style=social)](https://github.com/datascry/openroles/stargazers)
+[![GitHub Repo stars](https://img.shields.io/github/stars/raymondmsb/fetch-a-job?style=social)](https://github.com/raymondmsb/fetch-a-job/stargazers)
 
-[![openroles in action](.github/assets/screenshot-desktop.png)](https://openroles.today/)
+[![openroles in action](.github/assets/screenshot-desktop.png)](https://raymondmsb.github.io/fetch-a-job/)
 
 <details>
 <summary><strong>Dark mode &amp; mobile</strong></summary>
@@ -27,7 +27,7 @@
 </details>
 
 > [!NOTE]
-> Live at **https://openroles.today/**.
+> Live at **https://raymondmsb.github.io/fetch-a-job/**.
 > Refreshed every night.
 
 ## What it is
@@ -52,10 +52,10 @@ a Notion page. No login required for any of these.
 
 | Query | URL |
 |---|---|
-| Senior + staff engineers on Greenhouse or Lever, remote-only, last 7 days | [`?ats=greenhouse,lever&level=senior,staff&wt=remote&since=7d`](https://openroles.today/?ats=greenhouse,lever&level=senior,staff&wt=remote&since=7d) |
-| "Staff engineer" anywhere in the title, Germany only | [`?q=title:"staff engineer"&country=DE`](https://openroles.today/?q=title%3A%22staff+engineer%22&country=DE) |
-| Stripe, all roles | [`?q=company:stripe`](https://openroles.today/?q=company%3Astripe) |
-| Hide recruiter posts + hide stale carry-forwards | [`?recruiter=0&hide_stale=1`](https://openroles.today/?recruiter=0&hide_stale=1) |
+| Senior + staff engineers on Greenhouse or Lever, remote-only, last 7 days | [`?ats=greenhouse,lever&level=senior,staff&wt=remote&since=7d`](https://raymondmsb.github.io/fetch-a-job/?ats=greenhouse,lever&level=senior,staff&wt=remote&since=7d) |
+| "Staff engineer" anywhere in the title, Germany only | [`?q=title:"staff engineer"&country=DE`](https://raymondmsb.github.io/fetch-a-job/?q=title%3A%22staff+engineer%22&country=DE) |
+| Stripe, all roles | [`?q=company:stripe`](https://raymondmsb.github.io/fetch-a-job/?q=company%3Astripe) |
+| Hide recruiter posts + hide stale carry-forwards | [`?recruiter=0&hide_stale=1`](https://raymondmsb.github.io/fetch-a-job/?recruiter=0&hide_stale=1) |
 
 The URL DSL is documented in [`specs/filter-ui.md`](specs/filter-ui.md);
 the parser is property-tested in
@@ -177,9 +177,14 @@ docs/adr/   Locked architectural decisions
 
 ## Acknowledgements
 
-Inspiration and design influence for this project came from
+This instance builds on [datascry/openroles](https://github.com/datascry/openroles),
+whose scraper fleet, slim-index pipeline and frontend it runs. Code is MIT, the
+dataset CC BY-SA 4.0 — both copyright lines are retained in `LICENSE` and
+`LICENSE-DATA`.
+
+Inspiration and design influence for the original came from
 [Feashliaa/job-board-aggregator](https://github.com/Feashliaa/job-board-aggregator).
-Independent implementation, but credit where credit is due.
+Credit where credit is due.
 
 ## Help spread the word
 
@@ -188,8 +193,8 @@ account-free, and tracker-free — please ⭐ the repo and pass it to a
 friend who's job-hunting. Every star helps people find an aggregator
 that's actually on their side.
 
-<a href="https://github.com/datascry/openroles/stargazers">
-  <img alt="Stargazers over time" src="https://starchart.cc/datascry/openroles.svg" />
+<a href="https://github.com/raymondmsb/fetch-a-job/stargazers">
+  <img alt="Stargazers over time" src="https://starchart.cc/raymondmsb/fetch-a-job.svg" />
 </a>
 
-Copyright © 2026 datascry.
+Copyright © 2026 Raymond Bach.

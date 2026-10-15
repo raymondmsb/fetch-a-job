@@ -1,12 +1,14 @@
 import { defineConfig, devices } from "@playwright/test";
 
+import { SITE_BASE_PATH } from "./src/lib/site-config.ts";
+
 const PREVIEW_PORT = 4321;
 const HOST_URL = `http://127.0.0.1:${PREVIEW_PORT}`;
-// The site is served at the openroles.today apex with no base path. Test
-// paths stay literal (e.g. `/role/?id=...`). SITE_BASE is kept as an empty
-// string so existing `${SITE_BASE}/foo` interpolations still produce
-// root-relative paths without a special-case at every call site.
-export const SITE_BASE = "";
+// The site is served as a GitHub Pages project site, so every route sits
+// under a path prefix. SITE_BASE mirrors Astro's `base` from the shared
+// site-config constant, so `${SITE_BASE}/foo` interpolations resolve to the
+// same paths the built site actually serves.
+export const SITE_BASE = SITE_BASE_PATH;
 // Chrome DevTools Protocol port for the lighthouse project. Lighthouse
 // connects over CDP to the browser Playwright launches; the port must match
 // what the Chromium binary is started with.

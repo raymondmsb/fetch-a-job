@@ -18,9 +18,9 @@
 // the Lighthouse "Good" threshold).
 
 import { chromium, type Page } from "@playwright/test";
-import { SITE_ORIGIN } from "../src/lib/site-config.ts";
+import { SITE_URL } from "../src/lib/site-config.ts";
 
-const TARGET = process.argv[2] ?? `${SITE_ORIGIN}/`;
+const TARGET = process.argv[2] ?? `${SITE_URL}/`;
 const VISIT_DURATION_MS = 60_000; // observe for a minute
 const FILTER_INTERACTIONS = [
   // Wait until rows render, then exercise filters

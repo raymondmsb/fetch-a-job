@@ -14,7 +14,7 @@
  *   - console errors / page errors that nobody monitors
  *
  * Usage:
- *   bun run scripts/validate-live.ts                  # against openroles.today
+ *   bun run scripts/validate-live.ts                  # against the live site
  *   bun run scripts/validate-live.ts https://...      # override target
  *   HEADED=1 bun run scripts/validate-live.ts         # show the browser
  *
@@ -26,9 +26,9 @@
 
 import { writeFileSync } from "node:fs";
 import { type Browser, chromium, type Page } from "@playwright/test";
-import { SITE_ORIGIN } from "../src/lib/site-config.ts";
+import { SITE_URL } from "../src/lib/site-config.ts";
 
-const TARGET = process.argv[2] ?? `${SITE_ORIGIN}/`;
+const TARGET = process.argv[2] ?? `${SITE_URL}/`;
 const HEADED = process.env["HEADED"] === "1";
 const VIEWPORT = { width: 1280, height: 900 };
 const RESULTS: Result[] = [];

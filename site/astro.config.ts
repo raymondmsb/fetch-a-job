@@ -1,7 +1,7 @@
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import { defineConfig } from "astro/config";
-import { SITE_ORIGIN } from "./src/lib/site-config.ts";
+import { SITE_BASE_PATH, SITE_ORIGIN } from "./src/lib/site-config.ts";
 
 // Site config — https://docs.astro.build/en/reference/configuration-reference/
 //
@@ -11,6 +11,10 @@ import { SITE_ORIGIN } from "./src/lib/site-config.ts";
 // TypeScript-readable place.
 export default defineConfig({
   site: SITE_ORIGIN,
+  // Project-site path prefix. Populates import.meta.env.BASE_URL, which the
+  // runtime data fetches (manifest + slim-index chunks) and the Service
+  // Worker scope derive their URLs from.
+  base: SITE_BASE_PATH,
   output: "static",
   trailingSlash: "ignore",
   integrations: [
