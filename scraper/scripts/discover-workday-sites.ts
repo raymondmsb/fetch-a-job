@@ -33,7 +33,7 @@ const CONCURRENCY = Math.min(
   Math.max(1, Number.parseInt(process.env["CONCURRENCY"] ?? "6", 10)),
 );
 const UA =
-  process.env["UA"] ?? `openroles/${SCHEMA_VERSION} (+https://github.com/datascry/openroles)`;
+  process.env["UA"] ?? `fetch-a-job/${SCHEMA_VERSION} (+https://github.com/raymondmsb/fetch-a-job)`;
 const FORCE = process.env["FORCE"] === "1";
 
 async function loadTenants(path: string): Promise<Tenant[]> {

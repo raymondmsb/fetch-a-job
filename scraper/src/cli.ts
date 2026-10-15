@@ -513,7 +513,7 @@ export async function runHarvestCommand(argv: ReadonlyArray<string>): Promise<nu
   if (args.userAgent !== undefined) {
     userAgent = args.userAgent;
   } else if (args.contactUrl !== undefined) {
-    userAgent = `openroles/${SCHEMA_VERSION} (+${args.contactUrl})`;
+    userAgent = `fetch-a-job/${SCHEMA_VERSION} (+${args.contactUrl})`;
   } else {
     console.error(
       "harvest: --user-agent or --contact-url is required (so the receiving site can identify this bot)",
@@ -756,7 +756,7 @@ export async function runReprobeCommand(argv: ReadonlyArray<string>): Promise<nu
   if (args.userAgent !== undefined) {
     userAgent = args.userAgent;
   } else if (args.contactUrl !== undefined) {
-    userAgent = `openroles/${SCHEMA_VERSION} (+${args.contactUrl})`;
+    userAgent = `fetch-a-job/${SCHEMA_VERSION} (+${args.contactUrl})`;
   } else {
     console.error("reprobe: --user-agent or --contact-url is required");
     return 2;
@@ -915,7 +915,7 @@ export async function runDiscoverWorkdaySitesCommand(argv: ReadonlyArray<string>
   if (args.userAgent !== undefined) {
     userAgent = args.userAgent;
   } else if (args.contactUrl !== undefined) {
-    userAgent = `openroles/${SCHEMA_VERSION} (+${args.contactUrl})`;
+    userAgent = `fetch-a-job/${SCHEMA_VERSION} (+${args.contactUrl})`;
   } else {
     console.error("discover-workday-sites: --user-agent or --contact-url is required");
     return 2;
@@ -1055,7 +1055,7 @@ export async function runDiscoverGjobsfeedCommand(argv: ReadonlyArray<string>): 
   if (args.userAgent !== undefined) {
     userAgent = args.userAgent;
   } else if (args.contactUrl !== undefined) {
-    userAgent = `openroles/${SCHEMA_VERSION} (+${args.contactUrl})`;
+    userAgent = `fetch-a-job/${SCHEMA_VERSION} (+${args.contactUrl})`;
   } else {
     console.error("discover-gjobsfeed: --user-agent or --contact-url is required");
     return 2;

@@ -130,7 +130,7 @@ for ats in $ATS_LIST; do
     --ats "$ats" \
     --snapshots-since 2008 \
     --skip-probe \
-    --contact-url https://github.com/datascry/openroles
+    --contact-url https://github.com/raymondmsb/fetch-a-job
 done
 
 # Stage 2 — liveness probe across every just-discovered slug.
@@ -145,7 +145,7 @@ for ats in $ATS_LIST; do
     --ats "$ats" \
     --max-age-days 0 \
     --batch-size 100000 \
-    --contact-url https://github.com/datascry/openroles
+    --contact-url https://github.com/raymondmsb/fetch-a-job
 done
 
 # Stage 3 — commit.

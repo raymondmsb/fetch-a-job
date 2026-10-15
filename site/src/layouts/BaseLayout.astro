@@ -299,9 +299,9 @@ const totalRolesFormatted = new Intl.NumberFormat("en-US").format(totalRoles);
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          // BASE_URL is rewritten at build time. With the apex domain
-          // serving the app at root, BASE_URL is "/" and the scope is "/"
-          // — the SW owns the whole openroles.today origin.
+          // BASE_URL is rewritten at build time. Serving under a
+          // project-site path prefix makes BASE_URL "/<repo>/"
+          // — the SW owns its registered scope.
           const base = import.meta.env.BASE_URL.replace(/\/$/, "");
           navigator.serviceWorker
             .register(`${base}/sw.js`, { scope: `${base}/` })

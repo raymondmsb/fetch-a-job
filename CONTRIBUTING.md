@@ -6,8 +6,8 @@ non-negotiable disciplines; please read them before opening a PR.
 ## Setup
 
 ```sh
-git clone https://github.com/datascry/openroles.git
-cd openroles
+git clone https://github.com/raymondmsb/fetch-a-job.git
+cd fetch-a-job
 bun install
 bunx lefthook install   # wire up pre-commit hooks
 bun test                # full test suite

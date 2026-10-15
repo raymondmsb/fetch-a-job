@@ -14,7 +14,7 @@ console.log("reading", path);
 
 const robots = new RobotsTxtCache();
 const client = new HttpClient({
-  userAgent: "openroles/1.2.0 (+https://github.com/datascry/openroles)",
+  userAgent: "fetch-a-job/1.2.0 (+https://github.com/raymondmsb/fetch-a-job)",
   robots,
 });
 const tenants = z.array(TenantSchema).parse(JSON.parse(await readFile(path, "utf8")));
